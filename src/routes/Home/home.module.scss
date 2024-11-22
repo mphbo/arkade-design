@@ -1,0 +1,84 @@
+.page {
+  background-color: rgba(1, 1, 55, 1);
+}
+
+.visualizerSection {
+  color: black;
+  margin-top: -5px;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  background-image: url('../../assets/home-dark-arkade.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.bioSection {
+  color: white;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #80abbe;
+  background-image: url('../../assets/bio-arkade2.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.soundcloudSection {
+  color: black;
+  height: 90vh;
+  background-color: black;
+  background-image: url('../../assets/sc-arkade2.jpeg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.sideScrollSection {
+  color: white;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #80abbe;
+  background-image: url('../../assets/side-scroll.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+
+.emailSection {
+  z-index: -1;
+  color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  background-image: url('../../assets/email3.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.socialsSection {
+  color: white;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #80abbe;
+  background-image: url('../../assets/socials2.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}

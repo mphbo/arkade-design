@@ -1,0 +1,32 @@
+.list {
+    max-width: 400px;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: solid rgba(255, 255, 255, 0.7) 3px;
+    margin: 0 10px;
+    background-color: rgba(1, 1, 55, 0.4) !important;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    img {
+        position: absolute;
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    p {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        color: white;
+    }
+}

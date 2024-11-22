@@ -1,0 +1,25 @@
+.appBar {
+    background-color: transparent !important;
+}
+
+.navbar {
+    color: white !important;
+    border-radius: 0;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px; 
+}
+
+.iconContainerInner {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    border-radius: 100%;
+    background-color: rgba(1, 1, 55, 0.3);
+    svg {
+        color: white;
+    }
+}

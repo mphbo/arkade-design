@@ -1,0 +1,25 @@
+.email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(1, 1, 55, 0.4);
+    width: 100%;
+    height: 100vh;
+}
+
+.emailInner {
+    margin-top: 40px;
+    background-color: rgba(1, 1, 55, 0.2);
+    padding: 30px 40px;
+    width: 60%;
+    max-width: 400px;
+}
+
+.heading {
+    font-size: 20px;
+    margin-bottom: 40px;
+    margin-top: 0;
+    width: 100%;
+}
