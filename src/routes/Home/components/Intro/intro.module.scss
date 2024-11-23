@@ -6,6 +6,7 @@
     justify-content: center;
     color: white;
     overflow: hidden;
+    position: relative;
 }
 
 .video {
@@ -13,7 +14,6 @@
     width: 100%;
     position: absolute;
     object-fit: cover;
-    margin-top: 64px;
     max-width: 1200px;
     z-index: 1;
 }
