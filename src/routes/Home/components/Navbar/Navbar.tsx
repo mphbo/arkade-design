@@ -105,49 +105,8 @@ function Navbar({
                   id="panel1-header"
                 >
                   <div className={styles.title}>
-                    <ChangeHistoryIcon
-                      sx={{
-                        display: { xs: "flex", md: "none" },
-                        mr: 2,
-                        mb: 0.3,
-                        fontSize: 30,
-                      }}
-                    />
                     <div>
-                      <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
-                        sx={{
-                          mr: "15px",
-                          display: { xs: "flex", md: "none" },
-                          flexGrow: 0.0,
-                          fontFamily: "monospace",
-                          fontWeight: 700,
-                          letterSpacing: ".3rem",
-                          color: "inherit",
-                          textDecoration: "none",
-                        }}
-                      >
-                        Arkade
-                      </Typography>
-                      <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
-                        sx={{
-                          mr: 2,
-                          fontFamily: "monospace",
-                          fontWeight: 700,
-                          letterSpacing: ".3rem",
-                          color: "inherit",
-                          textDecoration: "none",
-                        }}
-                      >
-                        Design
-                      </Typography>
+                      <img alt="small logo" src="/ARKADE2.svg" />
                     </div>
                   </div>
                 </AccordionSummary>

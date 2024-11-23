@@ -1,14 +1,8 @@
 import styles from "./bio.module.scss";
-import ChangeHistoryIcon from "@mui/icons-material/ChangeHistory";
 
 function Bio() {
   return (
     <div className={styles.bio}>
-      <ChangeHistoryIcon
-        sx={{
-          fontSize: 70,
-        }}
-      />
       <span className={styles.bioText}>
         With a professional background in web development and a passion for
         design, I am here to fill virtually all of your content and software

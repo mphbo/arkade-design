@@ -32,7 +32,7 @@ function Home() {
           animate={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 4 }}
         >
-          <div ref={visualizerRef} className={styles.visualizerSection}>
+          <div ref={visualizerRef} className={styles.introSection}>
             <Intro />
           </div>
           <div ref={bioRef} className={styles.bioSection}>

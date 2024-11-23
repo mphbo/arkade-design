@@ -35,7 +35,7 @@
     "web-vitals": "2.1.4"
   },
   "scripts": {
-    "dev": "react-scripts start",
+    "dev": "cross-env BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -59,6 +59,7 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "7.0.3",
     "raw-loader": "4.0.2"
   }
 }
