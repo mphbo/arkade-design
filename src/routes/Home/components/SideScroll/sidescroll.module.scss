@@ -17,6 +17,7 @@
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
+    z-index: 3;
   }
   
   .parallax .scroller {
@@ -35,4 +36,21 @@
   .parallax span {
     margin-right: 30px;
   }
-  
+
+  .video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 1200px;
+  }
+
+  .overlay {
+    background-color: #a6000055;
+    pointer-events: none; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+  }

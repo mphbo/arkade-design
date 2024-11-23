@@ -8,19 +8,19 @@ const socials = [
     image: "instagram.svg",
   },
   {
-    title: "TikTok",
-    url: "https://www.tiktok.com/@dark.arkade",
-    image: "tiktok.svg",
+    title: "Instagram",
+    url: "https://www.instagram.com/arkade.design94/",
+    image: "instagram.svg",
   },
   {
-    title: "Spotify",
-    url: "https://open.spotify.com/artist/2HmJ9J0hLsMp81HvQj7B1l?si=ExqUWDjmRSSm-sZ0TKTUtw",
-    image: "spotify.svg",
+    title: "Instagram",
+    url: "https://www.instagram.com/arkade.design94/",
+    image: "instagram.svg",
   },
   {
-    title: "SoundCloud",
-    url: "https://soundcloud.com/dark-arkade",
-    image: "soundcloud.svg",
+    title: "Instagram",
+    url: "https://www.instagram.com/arkade.design94/",
+    image: "instagram.svg",
   },
 ];
 

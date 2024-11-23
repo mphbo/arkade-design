@@ -38,17 +38,17 @@ function Home() {
           <div ref={bioRef} className={styles.bioSection}>
             <Bio />
           </div>
-          {/* <div className={styles.socialsSection}>
-            <Socials />
-          </div> */}
-          {/* <div ref={soundcloudRef} className={styles.soundcloudSection}>
-            <SoundCloudWidget audio={audio} />
-          </div> */}
           <div className={styles.sideScrollSection}>
             <SideScroll />
           </div>
           {/* <div ref={emailRef} className={styles.emailSection}>
             <Email />
+          </div> */}
+          {/* <div className={styles.socialsSection}>
+            <Socials />
+          </div> */}
+          {/* <div ref={soundcloudRef} className={styles.soundcloudSection}>
+            <SoundCloudWidget audio={audio} />
           </div> */}
         </motion.main>
         <BottomNavbar audio={audio} />
