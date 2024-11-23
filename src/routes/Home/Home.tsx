@@ -38,9 +38,9 @@ function Home() {
           <div ref={bioRef} className={styles.bioSection}>
             <Bio />
           </div>
-          <div className={styles.socialsSection}>
+          {/* <div className={styles.socialsSection}>
             <Socials />
-          </div>
+          </div> */}
           <div ref={soundcloudRef} className={styles.soundcloudSection}>
             <SoundCloudWidget audio={audio} />
           </div>

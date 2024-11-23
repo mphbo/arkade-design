@@ -1,13 +1,37 @@
 .bio {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    z-index: 2;
     background-color: #a6000055;
-    padding: 25px 30px 40px 30px;
+    padding: 40px 30px;
+}
+
+.bioText {
+    font-size: 16px;
     line-height: 1.6;
     letter-spacing: 1.4px;
-    font-size: 18px;
     word-spacing: 2px;
-    text-align: center;
+    padding: 40px 0;
+    border-top: 3px solid #ffffff55;
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 1200px;
 }
