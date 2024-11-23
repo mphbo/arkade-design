@@ -4,7 +4,7 @@ import SocialButton from "./components/SocialButton";
 const socials = [
   {
     title: "Instagram",
-    url: "https://www.instagram.com/dark.arkade/",
+    url: "https://www.instagram.com/arkade.design94/",
     image: "instagram.svg",
   },
   {

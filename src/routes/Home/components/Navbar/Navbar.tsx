@@ -84,7 +84,7 @@ function Navbar({
                 textDecoration: "none",
               }}
             >
-              DARK ARKADE
+              ARKADE DESIGN
             </Typography>
 
             {/* Mobile */}
@@ -130,7 +130,7 @@ function Navbar({
                           textDecoration: "none",
                         }}
                       >
-                        DARK
+                        Arkade
                       </Typography>
                       <Typography
                         variant="h5"
@@ -146,7 +146,7 @@ function Navbar({
                           textDecoration: "none",
                         }}
                       >
-                        ARKADE
+                        Design
                       </Typography>
                     </div>
                   </div>

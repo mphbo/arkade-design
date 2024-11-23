@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import Visualizer from "./components/Visualizer/Visualizer";
+import Intro from "./components/Intro/Intro";
 import Navbar from "./components/Navbar";
 import styles from "./home.module.scss";
 import SoundCloudWidget from "./components/SoundCloudWidget";
@@ -33,7 +33,7 @@ function Home() {
           transition={{ ease: "easeOut", duration: 4 }}
         >
           <div ref={visualizerRef} className={styles.visualizerSection}>
-            <Visualizer audio={audio} />
+            <Intro />
           </div>
           <div ref={bioRef} className={styles.bioSection}>
             <Bio />

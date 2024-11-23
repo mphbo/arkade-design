@@ -1,5 +1,5 @@
 .page {
-  background-color: rgba(1, 1, 55, 1);
+  background-color: #fff;
 }
 
 .visualizerSection {
@@ -10,7 +10,6 @@
   justify-content: center;
   align-items: center;
   background-color: black;
-  background-image: url('../../assets/home-dark-arkade.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -22,8 +21,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #80abbe;
-  background-image: url('../../assets/bio-arkade2.jpg');
+  background-color: #a6000055;
+  // background-image: url('../../assets/bio-arkade2.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

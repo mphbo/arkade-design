@@ -1,3 +1,3 @@
-# DARK ARKADE
+# ARKADE DESIGN
 
-A music production portfolio site developed with React, ThreeJS, React Three Fiber, OpenGL Shading Language and TypeScript
+A design, development and overall service portfolio site developed with React, TypeScript

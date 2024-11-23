@@ -21,15 +21,15 @@ const AnimatedPage = ({ children }: any) => {
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/home",
     element: (
       <AnimatedPage>
         <Landing />
       </AnimatedPage>
     ),
-  },
-  {
-    path: "/home",
-    element: <Home />,
   },
 ]);
 

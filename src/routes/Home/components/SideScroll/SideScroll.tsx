@@ -89,10 +89,11 @@ export default function SideScroll() {
   return (
     <div className={styles.sideScrollContainer}>
       <ParallaxText baseVelocity={-0.5}>
-        Dark Arkade Dark Arkade Dark Arkade Dark Arkade
+        Arkade Design Arkade Design Arkade Design Arkade Design
       </ParallaxText>
       <ParallaxText baseVelocity={0.5}>
-        Midtempo Synthwave Dark House Midtempo Synthwave
+        Video Editing Graphic Design Web Development Video Editing Graphic
+        Design Web Development
       </ParallaxText>
     </div>
   );
