@@ -29,16 +29,22 @@
 
 .sideScrollSection {
   color: white;
-  height: 100vh;
+  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #80abbe;
-  background-image: url('../../assets/side-scroll.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-blend-mode: multiply;
+}
+
+.projectsSection {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-image: url('../../assets/bio-arkade2.jpg');
+  // background-position: center center;
+  // background-size: cover;
+  // background-blend-mode: multiply;
 }
 
 .soundcloudSection {

@@ -18,7 +18,7 @@ import {
 import { ExpandMore } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
-const pages: string[] = [];
+const pages: string[] = ["Home", "Bio", "Projects"];
 
 interface NavBarProps {
   refs: {

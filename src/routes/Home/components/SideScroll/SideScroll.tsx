@@ -95,10 +95,10 @@ export default function SideScroll() {
         Video Editing Graphic Design Web Development Video Editing Graphic
         Design Web Development
       </ParallaxText>
-      <video className={styles.video} muted autoPlay loop>
+      {/* <video className={styles.video} muted autoPlay loop>
         <source src="/fire.mp4" type="video/mp4" />
       </video>
-      <div className={styles.overlay}></div>
+      <div className={styles.overlay}></div> */}
     </div>
   );
 }

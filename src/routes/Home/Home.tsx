@@ -10,6 +10,7 @@ import Socials from "./components/Socials";
 import BottomNavbar from "./components/BottomNavbar";
 import { motion } from "framer-motion";
 import SideScroll from "./components/SideScroll";
+import Projects from "./components/Projects";
 
 function Home() {
   const audio = useRef<null | HTMLAudioElement>(null);
@@ -40,6 +41,9 @@ function Home() {
           </div>
           <div className={styles.sideScrollSection}>
             <SideScroll />
+          </div>
+          <div className={styles.projectsSection}>
+            <Projects />
           </div>
           {/* <div ref={emailRef} className={styles.emailSection}>
             <Email />
