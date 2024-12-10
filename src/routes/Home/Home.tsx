@@ -11,6 +11,7 @@ import BottomNavbar from "./components/BottomNavbar";
 import { motion } from "framer-motion";
 import SideScroll from "./components/SideScroll";
 import Projects from "./components/Projects";
+import ModelContainer from "./components/Model/ModelContainer";
 
 function Home() {
   const audio = useRef<null | HTMLAudioElement>(null);
@@ -44,6 +45,9 @@ function Home() {
           </div>
           <div className={styles.projectsSection}>
             <Projects />
+          </div>
+          <div className={styles.modelSection}>
+            <ModelContainer />
           </div>
           {/* <div ref={emailRef} className={styles.emailSection}>
             <Email />
