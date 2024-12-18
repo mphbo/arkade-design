@@ -7,12 +7,14 @@ import React from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Model() {
-  const { nodes, materials } = useGLTF("/untitled.glb");
+  const { nodes, materials } = useGLTF("/dungeon.glb");
   return (
     <group dispose={null}>
-      <mesh geometry={nodes.Cube.geometry} material={materials.Material} />
+      <mesh geometry={nodes.crate.geometry} material={materials.brown}>
+        <meshStandardMaterial color="red" />
+      </mesh>
     </group>
   );
 }
 
-useGLTF.preload("/untitled.glb");
+useGLTF.preload("/dungeon.glb");
