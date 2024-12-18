@@ -8,7 +8,7 @@ function ModelContainer() {
     <div className={styles.model}>
       <Canvas camera={{ fov: 64, position: [-2, 2, 0] }}>
         <ambientLight intensity={5} />
-        <OrbitControls enableZoom={false} enablePan={false} />
+        <OrbitControls />
         <Model />
       </Canvas>
     </div>
