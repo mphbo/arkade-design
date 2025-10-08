@@ -4,8 +4,8 @@ import { PerspectiveCamera } from "@react-three/drei";
 import { HackerRoom } from "./components/HackerRoom";
 import { Suspense } from "react";
 import { CanvasLoader } from "./components/CanvasLoader";
-import { Leva, useControls } from "leva";
-import { getDefaultControls } from "../../utils/defaultControls";
+// import { Leva, useControls } from "leva";
+// import { getDefaultControls } from "../../utils/defaultControls";
 export const Hero = () => {
   //   const controls = useControls("Hacker Room", getDefaultControls());
 
