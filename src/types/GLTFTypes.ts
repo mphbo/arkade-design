@@ -1,0 +1,48 @@
+import * as THREE from "three";
+export type GLTFResult = {
+  nodes: {
+    buttons: THREE.Mesh;
+    buttons001: THREE.Mesh;
+    Cube: THREE.Mesh;
+    Cube001: THREE.Mesh;
+    Cube002: THREE.Mesh;
+    Cube003: THREE.Mesh;
+    Cube004: THREE.Mesh;
+    Cube005: THREE.Mesh;
+    Cube006: THREE.Mesh;
+    Cube007: THREE.Mesh;
+    Cube008: THREE.Mesh;
+    Cube009: THREE.Mesh;
+    Cube010: THREE.Mesh;
+    Cube011: THREE.Mesh;
+    Cube012: THREE.Mesh;
+    Cube013: THREE.Mesh;
+    Cube014: THREE.Mesh;
+    Cube015: THREE.Mesh;
+    Cube016: THREE.Mesh;
+    Cube017: THREE.Mesh;
+    Cube018: THREE.Mesh;
+    Cube019: THREE.Mesh;
+    Cube020: THREE.Mesh;
+    Cube021: THREE.Mesh;
+    Cube022: THREE.Mesh;
+    Cube023: THREE.Mesh;
+    Cube024: THREE.Mesh;
+    Cube025: THREE.Mesh;
+    Cube_1: THREE.Mesh;
+    Cube_2: THREE.Mesh;
+    Cube_3: THREE.Mesh;
+    connector: THREE.Mesh;
+    connector001: THREE.Mesh;
+    front: THREE.Mesh;
+    handle: THREE.Mesh;
+    handle001: THREE.Mesh;
+    left: THREE.Mesh;
+    right: THREE.Mesh;
+    surround001: THREE.Mesh;
+    surround002: THREE.Mesh;
+  };
+  materials: {
+    [name: string]: THREE.Material;
+  };
+};
