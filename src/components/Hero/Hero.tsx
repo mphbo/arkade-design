@@ -19,7 +19,7 @@ export const Hero = () => {
           <HackerRoom
             scale={1.5}
             position={[0, -4, 0]}
-            rotation={[0.3, 0.3, 0]}
+            rotation={[0.3, 0.8, 0]}
           />
           {/* <group> */}
           <Target
