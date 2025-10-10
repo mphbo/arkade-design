@@ -32,7 +32,7 @@ export const Hero = () => {
             <CyberpunkCube
               scale={1}
               position={[0, -4, 0]}
-              rotation={[0.2, -1.6, 0]}
+              rotation={[0, -1.6, 0]}
             />
             <mesh receiveShadow position={[12, -3, 0]}>
               <boxGeometry args={[7, 4, 7]} />{" "}
