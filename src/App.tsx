@@ -8,7 +8,6 @@ function App() {
       <Navbar />
       <main className={styles.main}>
         <Hero />
-        <h1 className={styles.text}>hello world</h1>
       </main>
     </>
   );
