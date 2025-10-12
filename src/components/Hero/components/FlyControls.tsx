@@ -47,6 +47,7 @@ export const FlyControls: React.FC<FlyControlsProps> = ({ setMove }) => {
       >
         ⬆
       </div>
+      <div />
       <div
         style={buttonStyle}
         onTouchStart={() => handleTouchStart("backward")}
@@ -55,7 +56,6 @@ export const FlyControls: React.FC<FlyControlsProps> = ({ setMove }) => {
         ⬇
       </div>
       {/* Empty top-left */}
-      <div />
       <div />
       {/* Forward button */}
       <div
