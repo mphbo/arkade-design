@@ -19,6 +19,8 @@ export const Hero = () => {
     backward: false,
     left: false,
     right: false,
+    up: false,
+    down: false,
   });
 
   return (

@@ -8,6 +8,8 @@ export type MoveState = {
   backward: boolean;
   left: boolean;
   right: boolean;
+  up: boolean;
+  down: boolean;
 };
 
 type CameraMoverProps = {
@@ -31,7 +33,10 @@ export const CameraMover: React.FC<CameraMoverProps> = ({
       camera.position.addScaledVector(direction, -moveDistance);
 
     const right = new THREE.Vector3();
+    const up = new THREE.Vector3(0, 1, 0); // world Y-axis
     right.crossVectors(camera.up, direction).normalize();
+    if (move.up) camera.position.addScaledVector(up, moveDistance);
+    if (move.down) camera.position.addScaledVector(up, -moveDistance);
     if (move.left) camera.position.addScaledVector(right, moveDistance);
     if (move.right) camera.position.addScaledVector(right, -moveDistance);
   });
