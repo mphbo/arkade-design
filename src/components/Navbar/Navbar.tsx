@@ -5,7 +5,7 @@ export const Navbar = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.innerContainer}>
-          <a>
+          <a className={styles.logo} href="/">
             <img src="assets/arkade-design.svg" alt="Menu" />
           </a>
           <button className={styles.menuButton}>
