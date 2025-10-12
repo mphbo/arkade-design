@@ -28,7 +28,7 @@ export const Hero = () => {
       </div>
       {/* <Leva /> */}
       <div className={styles.controls}>
-        <FlyControls move={move} setMove={setMove} />
+        <FlyControls setMove={setMove} />
       </div>
       <Canvas gl={{ alpha: true }} className={styles.canvas}>
         <Suspense fallback={<CanvasLoader />}>
