@@ -5,9 +5,11 @@ export const Navbar = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.innerContainer}>
-          <a>hello</a>
+          <a>
+            <img src="assets/arkade-design.svg" alt="Menu" />
+          </a>
           <button className={styles.menuButton}>
-            <img src="menu.svg" alt="Menu" />
+            <img src="assets/menu.svg" alt="Menu" />
           </button>
         </div>
       </div>

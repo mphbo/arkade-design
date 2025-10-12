@@ -3,11 +3,10 @@ import React from "react";
 import type { MoveState } from "./CameraMover";
 
 interface FlyControlsProps {
-  move: MoveState;
   setMove: React.Dispatch<React.SetStateAction<MoveState>>;
 }
 
-export const FlyControls: React.FC<FlyControlsProps> = ({ move, setMove }) => {
+export const FlyControls: React.FC<FlyControlsProps> = ({ setMove }) => {
   const handleTouchStart = (key: keyof MoveState) =>
     setMove((prev) => ({ ...prev, [key]: true }));
 
