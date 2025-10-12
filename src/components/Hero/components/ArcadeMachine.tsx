@@ -1,7 +1,7 @@
 import { useGLTF } from "@react-three/drei";
 import type { GLTFResult } from "../../../types/GLTFTypes";
 
-export function HackerRoom(props: any) {
+export function ArcadeMachine(props: any) {
   const { nodes, materials } = useGLTF(
     "/models/arcade-console.glb"
   ) as unknown as GLTFResult;

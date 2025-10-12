@@ -1,6 +1,6 @@
 import { useGLTF } from "@react-three/drei";
 
-export const Target = ({
+export const Laptop = ({
   scale,
   position,
   rotation,

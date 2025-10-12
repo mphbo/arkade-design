@@ -1,10 +1,10 @@
 import { Canvas } from "@react-three/fiber";
 import styles from "./Hero.module.scss";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
-import { HackerRoom } from "./components/HackerRoom";
+import { ArcadeMachine } from "./components/ArcadeMachine";
 import { Suspense } from "react";
 import { CanvasLoader } from "./components/CanvasLoader";
-import { Target } from "./components/Target";
+import { Laptop } from "./components/Laptop";
 import { CyberpunkCube } from "./components/Model";
 import { CreativeCodeExample } from "./components/CreativeCodeExample";
 // import { Leva, useControls } from "leva";
@@ -20,12 +20,12 @@ export const Hero = () => {
         <Suspense fallback={<CanvasLoader />}>
           <PerspectiveCamera makeDefault position={[0, 0, 30]} />
           <group scale={0.2}>
-            <HackerRoom
+            <ArcadeMachine
               scale={2}
               position={[-10, -5, 0]}
               rotation={[0, 0.8, 0]}
             />
-            <Target
+            <Laptop
               scale={0.03}
               position={[12, 0, 0]}
               rotation={[0, -0.8, 0]}
