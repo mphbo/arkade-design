@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { CanvasLoader } from "./components/CanvasLoader";
 import { Target } from "./components/Target";
 import { CyberpunkCube } from "./components/Model";
+import { CreativeCodeExample } from "./components/CreativeCodeExample";
 // import { Leva, useControls } from "leva";
 // import { getDefaultControls } from "../../utils/defaultControls";
 export const Hero = () => {
@@ -14,7 +15,7 @@ export const Hero = () => {
   return (
     <section className={styles.placeholder}>
       {/* <Leva /> */}
-      <Canvas className={styles.canvas}>
+      <Canvas gl={{ alpha: true }} className={styles.canvas}>
         <OrbitControls />
         <Suspense fallback={<CanvasLoader />}>
           <PerspectiveCamera makeDefault position={[0, 0, 30]} />
@@ -54,6 +55,9 @@ export const Hero = () => {
           <directionalLight position={[0, -18, 28]} intensity={2} />
         </Suspense>
       </Canvas>
+      <div style={{ overflow: "hidden" }}>
+        <CreativeCodeExample />
+      </div>
     </section>
   );
 };

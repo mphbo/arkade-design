@@ -11,6 +11,7 @@ export const CanvasLoader = () => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        color: "white",
       }}
     >
       <p>{progress !== 0 ? `${progress.toFixed(2)}%}` : "Loding..."}</p>
