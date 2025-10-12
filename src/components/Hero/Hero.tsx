@@ -68,7 +68,7 @@ export const Hero = () => {
           <ambientLight intensity={1.5} />
           <directionalLight position={[0, -15, 88]} intensity={2} />
           <OrbitControls />
-          <CameraMover move={move} speed={8} />
+          <CameraMover move={move} speed={10} />
         </Suspense>
       </Canvas>
     </section>

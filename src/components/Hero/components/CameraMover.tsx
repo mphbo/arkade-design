@@ -21,17 +21,19 @@ export const CameraMover: React.FC<CameraMoverProps> = ({
 }) => {
   const { camera } = useThree();
 
-  useFrame(() => {
+  useFrame((_, delta) => {
     const direction = new THREE.Vector3();
+    const moveDistance = speed * delta;
     camera.getWorldDirection(direction);
 
-    if (move.forward) camera.position.addScaledVector(direction, speed);
-    if (move.backward) camera.position.addScaledVector(direction, -speed);
+    if (move.forward) camera.position.addScaledVector(direction, moveDistance);
+    if (move.backward)
+      camera.position.addScaledVector(direction, -moveDistance);
 
     const right = new THREE.Vector3();
     right.crossVectors(camera.up, direction).normalize();
-    if (move.left) camera.position.addScaledVector(right, speed);
-    if (move.right) camera.position.addScaledVector(right, -speed);
+    if (move.left) camera.position.addScaledVector(right, moveDistance);
+    if (move.right) camera.position.addScaledVector(right, -moveDistance);
   });
 
   return null;
