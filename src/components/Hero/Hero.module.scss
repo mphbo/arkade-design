@@ -10,3 +10,10 @@
   height: 100%;
   display: block;
 }
+
+.controls {
+  position: absolute;
+  bottom: 200px;
+  right: 250px;
+  z-index: 100000;
+}

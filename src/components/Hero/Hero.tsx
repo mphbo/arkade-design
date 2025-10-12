@@ -2,21 +2,35 @@ import { Canvas } from "@react-three/fiber";
 import styles from "./Hero.module.scss";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { ArcadeMachine } from "./components/ArcadeMachine";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import { CanvasLoader } from "./components/CanvasLoader";
 import { Laptop } from "./components/Laptop";
-import { CyberpunkCube } from "./components/Model";
-import { CreativeCodeExample } from "./components/CreativeCodeExample";
+import { CyberpunkCube } from "./components/CyberpunkCube";
+import { Flowfield } from "./components/Flowfield";
+import { FlyControls } from "./components/FlyControls";
+import { CameraMover, type MoveState } from "./components/CameraMover";
+// import { NoiseSculpture } from "./components/NoiseSculpture";
 // import { Leva, useControls } from "leva";
 // import { getDefaultControls } from "../../utils/defaultControls";
 export const Hero = () => {
   //   const controls = useControls("Hacker Room", getDefaultControls());
+  const [move, setMove] = useState<MoveState>({
+    forward: false,
+    backward: false,
+    left: false,
+    right: false,
+  });
 
   return (
     <section className={styles.placeholder}>
+      <div style={{ overflow: "hidden" }}>
+        <Flowfield />
+      </div>
       {/* <Leva /> */}
+      <div className={styles.controls}>
+        <FlyControls move={move} setMove={setMove} />
+      </div>
       <Canvas gl={{ alpha: true }} className={styles.canvas}>
-        <OrbitControls />
         <Suspense fallback={<CanvasLoader />}>
           <PerspectiveCamera makeDefault position={[0, 0, 30]} />
           <group scale={0.2}>
@@ -51,13 +65,12 @@ export const Hero = () => {
               reflectivity={1}
             />
           </mesh>
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[0, -18, 28]} intensity={2} />
+          <ambientLight intensity={1.5} />
+          <directionalLight position={[0, -15, 88]} intensity={2} />
+          <OrbitControls />
+          <CameraMover move={move} speed={8} />
         </Suspense>
       </Canvas>
-      <div style={{ overflow: "hidden" }}>
-        <CreativeCodeExample />
-      </div>
     </section>
   );
 };

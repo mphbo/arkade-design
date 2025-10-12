@@ -10,7 +10,7 @@ interface Particle {
   h: number;
 }
 
-export const CreativeCodeExample: React.FC = () => {
+export const Flowfield: React.FC = () => {
   const inc = 0.1;
   const scl = 10;
   let cols: number, rows: number;
