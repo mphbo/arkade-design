@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useLayoutEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 import gsap from "gsap";
@@ -38,7 +38,7 @@ export const CyberpunkCube = ({
   }
 
   // --- CENTER GEOMETRIES (optional, ensures smooth rotation) ---
-  useEffect(() => {
+  useLayoutEffect(() => {
     nodes.Cube.geometry.center();
     nodes.Cube001.geometry.center();
     nodes.Cube002.geometry.center();
