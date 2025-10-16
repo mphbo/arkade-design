@@ -52,16 +52,19 @@ export const CyberpunkCube = ({
   useEffect(() => {
     if (!cubesRef.current || !nodes.Cube) return;
 
-    const tl = gsap.to(cubesRef.current.rotation, {
-      y: "+=6.28", // full rotation
-      x: "+=6.28", // full rotation
-      z: "+=6.28", // full rotation
-      duration: 20,
-      ease: "linear",
-      repeat: -1,
+    const timeout = setTimeout(() => {
+      const tl = gsap.to(cubesRef.current!.rotation, {
+        y: "+=6.28",
+        x: "+=6.28", // full rotation
+        z: "+=6.28", // full rotation
+        duration: 20,
+        ease: "linear",
+        repeat: -1,
+      });
+      return () => tl.kill();
     });
 
-    return () => tl.kill();
+    return () => clearTimeout(timeout);
   }, [nodes.Cube]);
 
   // --- Tilt rotation for cubes (adjust as desired) ---
