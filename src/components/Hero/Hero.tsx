@@ -53,7 +53,6 @@ export const Hero = () => {
             />
             <mesh receiveShadow position={[12, -3, 0]}>
               <boxGeometry args={[7, 4, 7]} />{" "}
-              {/* width, height (thickness), depth */}
               <meshStandardMaterial color="darkred" />
             </mesh>
           </group>
