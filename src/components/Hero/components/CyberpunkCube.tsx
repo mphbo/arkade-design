@@ -48,7 +48,7 @@ export const CyberpunkCube = ({
 
   // --- SPIN ANIMATION (only cubes) ---
   useEffect(() => {
-    if (!cubesRef.current) return;
+    if (!cubesRef.current || !nodes.Cube) return;
 
     const tl = gsap.to(cubesRef.current.rotation, {
       y: "+=6.28", // full rotation
