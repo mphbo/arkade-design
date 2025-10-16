@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 import gsap from "gsap";
@@ -13,9 +13,8 @@ export const CyberpunkCube = ({
   rotation: [number, number, number];
 }) => {
   const cubesRef = useRef<THREE.Group>(null);
-  const { nodes, materials } = useGLTF("/models/cyberpunk-cube3.glb") as any;
+  const { nodes, materials } = useGLTF("models/cyberpunk-cube3.glb") as any;
 
-  // --- MATERIAL SETUP ---
   if (materials["main cube"]) {
     materials["main cube"].emissiveIntensity = 0;
     materials["main cube"].metalness = 40;
@@ -37,9 +36,7 @@ export const CyberpunkCube = ({
     materials["inside cube.001"].roughness = 0.7;
   }
 
-  // --- CENTER GEOMETRIES (before first render) ---
-  useLayoutEffect(() => {
-    if (!nodes.Cube) return;
+  useEffect(() => {
     nodes.Cube.geometry.center();
     nodes.Cube001.geometry.center();
     nodes.Cube002.geometry.center();
@@ -47,36 +44,30 @@ export const CyberpunkCube = ({
     nodes.Cube004.geometry.center();
   }, [nodes]);
 
-  // --- SPIN ANIMATION (only cubes) ---
-  // @ts-ignore
   useEffect(() => {
-    if (!cubesRef.current || !nodes.Cube) return;
+    if (!cubesRef.current) return;
 
-    const timeout = setTimeout(() => {
-      const tl = gsap.to(cubesRef.current!.rotation, {
-        y: "+=6.28",
-        x: "+=6.28", // full rotation
-        z: "+=6.28", // full rotation
-        duration: 20,
-        ease: "linear",
-        repeat: -1,
-      });
-      return () => tl.kill();
+    const tl = gsap.to(cubesRef.current.rotation, {
+      y: "+=6.28", // full rotation
+      x: "+=6.28", // full rotation
+      z: "+=6.28", // full rotation
+      duration: 10,
+      ease: "linear",
+      repeat: -1,
     });
 
-    return () => clearTimeout(timeout);
-  }, [nodes.Cube]);
+    return () => {
+      () => tl.kill();
+    };
+  }, []);
 
-  // --- Tilt rotation for cubes (adjust as desired) ---
   const tiltRotation: [number, number, number] = [-2.526, -Math.PI / 6, 2.526];
 
-  // --- Cube offset to match original GLTF ---
   const cubeOffset: [number, number, number] = [-7.053, 3.649, 0];
   const cubeScale = 1.768;
 
   return (
     <group scale={scale} position={position} rotation={rotation} dispose={null}>
-      {/* Tilted group containing spinning cubes */}
       <group rotation={tiltRotation} position={cubeOffset} scale={cubeScale}>
         <group ref={cubesRef}>
           <mesh
@@ -102,7 +93,6 @@ export const CyberpunkCube = ({
         </group>
       </group>
 
-      {/* Letters / extra meshes stay stationary */}
       <group
         position={[-3.793, 7.251, 0.033]}
         rotation={[Math.PI / 2, 0, -Math.PI / 2]}
