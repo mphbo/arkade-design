@@ -2,7 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import styles from "./Hero.module.scss";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { ArcadeMachine } from "./components/Models/ArcadeMachine";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { CanvasLoader } from "./components/CanvasLoader";
 import { Laptop } from "./components/Models/Laptop";
 import { CyberpunkCube } from "./components/Models/CyberpunkCube";
@@ -15,6 +15,7 @@ import { RedFlash } from "./components/RedFlash";
 // import { Leva, useControls } from "leva";
 // import { getDefaultControls } from "../../utils/defaultControls";
 export const Scene = () => {
+  const [showControls, setShowControls] = useState(false);
   //   const controls = useControls("Hacker Room", getDefaultControls());
   const [move, setMove] = useState<MoveState>({
     forward: false,
@@ -25,6 +26,10 @@ export const Scene = () => {
     down: false,
   });
 
+  useEffect(() => {
+    setTimeout(() => setShowControls(true), 5000);
+  }, []);
+
   return (
     <section className={styles.placeholder}>
       <div style={{ overflow: "hidden" }}>
@@ -32,7 +37,7 @@ export const Scene = () => {
       </div>
       {/* <Leva /> */}
       <div className={styles.controls}>
-        <FlyControls setMove={setMove} />
+        {showControls && <FlyControls setMove={setMove} />}
       </div>
       <Canvas gl={{ alpha: true }} className={styles.canvas}>
         <Suspense fallback={<CanvasLoader />}>
@@ -70,7 +75,7 @@ export const Scene = () => {
           </group>
           <ambientLight intensity={1.5} />
           <directionalLight position={[0, -15, 88]} intensity={2} />
-          <OrbitControls />
+          {showControls && <OrbitControls />}
           <CameraMover move={move} speed={10} />
           <CameraIntro startPos={[0, 0, 0]} endPos={[0, 0, 30]} duration={5} />
         </Suspense>
