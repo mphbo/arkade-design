@@ -77,7 +77,7 @@ export const Scene = () => {
           <directionalLight position={[0, -15, 88]} intensity={2} />
           {showControls && <OrbitControls />}
           <CameraMover move={move} speed={10} />
-          <CameraIntro startPos={[0, 0, 0]} endPos={[0, 0, 30]} duration={5} />
+          <CameraIntro startPos={[0, 0, 0]} endPos={[0, 0, 30]} duration={2} />
         </Suspense>
       </Canvas>
       <RedFlash active={true} duration={0.5} />

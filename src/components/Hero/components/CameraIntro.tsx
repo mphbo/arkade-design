@@ -1,6 +1,7 @@
 import { useThree } from "@react-three/fiber";
 import { useEffect } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export const CameraIntro = ({
   startPos,
@@ -13,7 +14,7 @@ export const CameraIntro = ({
 }) => {
   const { camera } = useThree();
 
-  useEffect(() => {
+  useGSAP(() => {
     // Start camera at startPos
     camera.position.set(...startPos);
 
@@ -23,9 +24,9 @@ export const CameraIntro = ({
       y: endPos[1],
       z: endPos[2],
       duration,
-      ease: "power2.out",
+      ease: "power1.in",
     });
-  }, [camera, startPos, endPos, duration]);
+  }, [camera]);
 
   return null;
 };
