@@ -1,12 +1,8 @@
 import { Canvas } from "@react-three/fiber";
 import styles from "./Hero.module.scss";
-import {
-  OrbitControls,
-  PerspectiveCamera,
-  useProgress,
-} from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { ArcadeMachine } from "./components/Models/ArcadeMachine";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useState } from "react";
 import { CanvasLoader } from "./components/CanvasLoader";
 import { Laptop } from "./components/Models/Laptop";
 import { CyberpunkCube } from "./components/Models/CyberpunkCube";
@@ -28,8 +24,6 @@ export const Scene = () => {
     up: false,
     down: false,
   });
-
-  const [flash, setFlash] = useState(false);
 
   return (
     <section className={styles.placeholder}>

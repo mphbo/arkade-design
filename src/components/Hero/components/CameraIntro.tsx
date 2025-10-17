@@ -2,7 +2,15 @@ import { useThree } from "@react-three/fiber";
 import { useEffect } from "react";
 import gsap from "gsap";
 
-export const CameraIntro = ({ startPos, endPos, duration = 3 }) => {
+export const CameraIntro = ({
+  startPos,
+  endPos,
+  duration = 3,
+}: {
+  startPos: [number, number, number];
+  endPos: [number, number, number];
+  duration?: number;
+}) => {
   const { camera } = useThree();
 
   useEffect(() => {
