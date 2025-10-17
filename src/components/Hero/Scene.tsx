@@ -1,18 +1,24 @@
 import { Canvas } from "@react-three/fiber";
 import styles from "./Hero.module.scss";
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
-import { ArcadeMachine } from "./components/ArcadeMachine";
-import { Suspense, useState } from "react";
+import {
+  OrbitControls,
+  PerspectiveCamera,
+  useProgress,
+} from "@react-three/drei";
+import { ArcadeMachine } from "./components/Models/ArcadeMachine";
+import { Suspense, useEffect, useState } from "react";
 import { CanvasLoader } from "./components/CanvasLoader";
-import { Laptop } from "./components/Laptop";
-import { CyberpunkCube } from "./components/CyberpunkCube";
+import { Laptop } from "./components/Models/Laptop";
+import { CyberpunkCube } from "./components/Models/CyberpunkCube";
 import { Flowfield } from "./components/Flowfield";
 import { FlyControls } from "./components/FlyControls";
 import { CameraMover, type MoveState } from "./components/CameraMover";
+import { CameraIntro } from "./components/CameraIntro";
+import { RedFlash } from "./components/RedFlash";
 // import { NoiseSculpture } from "./components/NoiseSculpture";
 // import { Leva, useControls } from "leva";
 // import { getDefaultControls } from "../../utils/defaultControls";
-export const Hero = () => {
+export const Scene = () => {
   //   const controls = useControls("Hacker Room", getDefaultControls());
   const [move, setMove] = useState<MoveState>({
     forward: false,
@@ -22,6 +28,8 @@ export const Hero = () => {
     up: false,
     down: false,
   });
+
+  const [flash, setFlash] = useState(false);
 
   return (
     <section className={styles.placeholder}>
@@ -34,7 +42,7 @@ export const Hero = () => {
       </div>
       <Canvas gl={{ alpha: true }} className={styles.canvas}>
         <Suspense fallback={<CanvasLoader />}>
-          <PerspectiveCamera makeDefault position={[0, 0, 30]} />
+          <PerspectiveCamera makeDefault position={[0, 0, 0]} />
           <group scale={0.4}>
             <ArcadeMachine
               scale={2}
@@ -70,8 +78,10 @@ export const Hero = () => {
           <directionalLight position={[0, -15, 88]} intensity={2} />
           <OrbitControls />
           <CameraMover move={move} speed={10} />
+          <CameraIntro startPos={[0, 0, 0]} endPos={[0, 0, 30]} duration={5} />
         </Suspense>
       </Canvas>
+      <RedFlash active={true} duration={0.5} />
     </section>
   );
 };

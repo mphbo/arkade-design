@@ -1,5 +1,5 @@
 import { useGLTF } from "@react-three/drei";
-import type { GLTFResult } from "../../../types/GLTFTypes";
+import type { GLTFResult } from "../../../../types/GLTFTypes";
 
 export function ArcadeMachine(props: any) {
   const { nodes, materials } = useGLTF(
