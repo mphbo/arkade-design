@@ -1,6 +1,6 @@
 import { Navbar } from "./components/Navbar";
 import styles from "./App.module.scss";
-import { Scene } from "./components/Hero";
+import { Scene } from "./components/Scene";
 
 function App() {
   return (
