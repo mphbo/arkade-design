@@ -83,7 +83,7 @@ export const Flowfield: React.FC = () => {
       if (particle.pos.y < 0) particle.pos.y = p.height;
 
       // show
-      p.stroke(particle.h, 255, 255, 20);
+      p.stroke(0, 255, 255, 20);
       particle.h += 0.1;
       if (particle.h > 255) particle.h = 0;
       p.point(particle.pos.x, particle.pos.y);

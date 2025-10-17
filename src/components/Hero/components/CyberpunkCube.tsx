@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export const CyberpunkCube = ({
   scale,
@@ -44,22 +45,21 @@ export const CyberpunkCube = ({
     nodes.Cube004.geometry.center();
   }, [nodes]);
 
-  useEffect(() => {
-    if (!cubesRef.current) return;
+  useGSAP(
+    () => {
+      if (!cubesRef.current) return;
 
-    const tl = gsap.to(cubesRef.current.rotation, {
-      y: "+=6.28", // full rotation
-      x: "+=6.28", // full rotation
-      z: "+=6.28", // full rotation
-      duration: 10,
-      ease: "linear",
-      repeat: -1,
-    });
-
-    return () => {
-      () => tl.kill();
-    };
-  }, []);
+      gsap.to(cubesRef.current.rotation, {
+        y: "+=6.28",
+        x: "+=6.28",
+        z: "+=6.28",
+        duration: 10,
+        ease: "linear",
+        repeat: -1,
+      });
+    },
+    { scope: cubesRef }
+  );
 
   const tiltRotation: [number, number, number] = [-2.526, -Math.PI / 6, 2.526];
 

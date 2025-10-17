@@ -35,7 +35,7 @@ export const Hero = () => {
       <Canvas gl={{ alpha: true }} className={styles.canvas}>
         <Suspense fallback={<CanvasLoader />}>
           <PerspectiveCamera makeDefault position={[0, 0, 30]} />
-          <group scale={0.2}>
+          <group scale={0.4}>
             <ArcadeMachine
               scale={2}
               position={[-10, -5, 0]}
@@ -52,20 +52,20 @@ export const Hero = () => {
               rotation={[0, -1.6, 0]}
             />
             <mesh receiveShadow position={[12, -3, 0]}>
-              <boxGeometry args={[7, 4, 7]} />{" "}
+              <boxGeometry args={[7, 4, 7]} />
               <meshStandardMaterial color="darkred" />
             </mesh>
+            <mesh scale={5} receiveShadow position={[0, -5, 0]}>
+              <boxGeometry args={[7, 0.2, 6]} />
+              {/* width, height (thickness), depth */}
+              <meshPhysicalMaterial
+                color="#ff0000ff"
+                metalness={1}
+                roughness={0}
+                reflectivity={1}
+              />
+            </mesh>
           </group>
-          <mesh receiveShadow position={[0, -1, 0]}>
-            <boxGeometry args={[7, 0.2, 6]} />{" "}
-            {/* width, height (thickness), depth */}
-            <meshPhysicalMaterial
-              color="#ff0000ff"
-              metalness={1}
-              roughness={0}
-              reflectivity={1}
-            />
-          </mesh>
           <ambientLight intensity={1.5} />
           <directionalLight position={[0, -15, 88]} intensity={2} />
           <OrbitControls />
