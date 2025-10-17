@@ -1,5 +1,4 @@
 import { useThree } from "@react-three/fiber";
-import { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
