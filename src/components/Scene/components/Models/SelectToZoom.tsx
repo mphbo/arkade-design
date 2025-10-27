@@ -1,5 +1,4 @@
 import { useBounds } from "@react-three/drei";
-import { useThree } from "@react-three/fiber";
 
 export function SelectToZoom({ children }: { children: React.ReactNode }) {
   const api = useBounds();
