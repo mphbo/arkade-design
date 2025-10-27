@@ -1,14 +1,7 @@
 import { useGLTF } from "@react-three/drei";
+import type { StandardModelProps } from "../../../../types/ModelType";
 
-export const Laptop = ({
-  scale,
-  position,
-  rotation,
-}: {
-  scale: number;
-  position: [number, number, number];
-  rotation: [number, number, number];
-}) => {
+export const Laptop = ({ scale, position, rotation }: StandardModelProps) => {
   const { nodes, materials } = useGLTF("/models/laptop.glb") as any;
   return (
     <group scale={scale} position={position} rotation={rotation} dispose={null}>

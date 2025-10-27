@@ -1,12 +1,18 @@
 import { useGLTF } from "@react-three/drei";
 import type { GLTFResult } from "../../../../types/GLTFTypes";
+import type { StandardModelProps } from "../../../../types/ModelType";
 
-export function ArcadeMachine(props: any) {
+export function ArcadeMachine({
+  scale,
+  position,
+  rotation,
+}: StandardModelProps) {
   const { nodes, materials } = useGLTF(
     "/models/arcade-console.glb"
   ) as unknown as GLTFResult;
+
   return (
-    <group {...props} dispose={null}>
+    <group scale={scale} position={position} rotation={rotation} dispose={null}>
       <mesh
         castShadow
         receiveShadow
@@ -241,6 +247,13 @@ export function ArcadeMachine(props: any) {
         geometry={nodes.Cube_3.geometry}
         material={materials["screen image"]}
       />
+      {/* Helper sphere to visualize the screen center */}
+      <mesh
+        position={[0, 3.8, 0]} // relative to group/world if needed
+      >
+        <sphereGeometry args={[0.2, 16, 16]} />
+        <meshStandardMaterial color="hotpink" emissive="hotpink" />
+      </mesh>
       <mesh
         castShadow
         receiveShadow

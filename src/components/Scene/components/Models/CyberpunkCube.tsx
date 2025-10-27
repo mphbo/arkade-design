@@ -1,19 +1,16 @@
-import { useRef, useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import type { StandardModelProps } from "../../../../types/ModelType";
 
 export const CyberpunkCube = ({
   scale,
   position,
   rotation,
-}: {
-  scale: number;
-  position: [number, number, number];
-  rotation: [number, number, number];
-}) => {
-  const cubesRef = useRef<THREE.Group>(null);
+}: StandardModelProps) => {
+  const ref = useRef<THREE.Group>(null);
   const { nodes, materials } = useGLTF("models/cyberpunk-cube3.glb") as any;
 
   if (materials["main cube"]) {
@@ -45,21 +42,18 @@ export const CyberpunkCube = ({
     nodes.Cube004.geometry.center();
   }, [nodes]);
 
-  useGSAP(
-    () => {
-      if (!cubesRef.current) return;
+  useGSAP(() => {
+    if (!ref?.current) return;
 
-      gsap.to(cubesRef.current.rotation, {
-        y: "+=6.28",
-        x: "+=6.28",
-        z: "+=6.28",
-        duration: 10,
-        ease: "linear",
-        repeat: -1,
-      });
-    },
-    { scope: cubesRef }
-  );
+    gsap.to(ref.current.rotation, {
+      y: "+=6.28",
+      x: "+=6.28",
+      z: "+=6.28",
+      duration: 10,
+      ease: "linear",
+      repeat: -1,
+    });
+  });
 
   const tiltRotation: [number, number, number] = [-2.526, -Math.PI / 6, 2.526];
 
@@ -69,7 +63,7 @@ export const CyberpunkCube = ({
   return (
     <group scale={scale} position={position} rotation={rotation} dispose={null}>
       <group rotation={tiltRotation} position={cubeOffset} scale={cubeScale}>
-        <group ref={cubesRef}>
+        <group ref={ref}>
           <mesh
             geometry={nodes.Cube.geometry}
             material={materials["main cube"]}
