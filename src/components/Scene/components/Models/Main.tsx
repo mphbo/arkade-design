@@ -8,8 +8,6 @@ import { SelectToZoom } from "./SelectToZoom";
 import { CameraIntro } from "../CameraIntro";
 import { useRef } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
-import { CameraDistance } from "../CameraDistance";
-import { Vector3 } from "three";
 
 export const Main = ({
   move,
@@ -25,7 +23,6 @@ export const Main = ({
   const { camera } = useThree();
 
   useFrame(() => {
-    // Prevent camera from going below y = 1
     setPosition({
       x: camera.position.x,
       y: camera.position.y,
